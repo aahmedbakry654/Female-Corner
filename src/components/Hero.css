@@ -11,6 +11,14 @@
   isolation: isolate;
 }
 
+.hero-subparagraph {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #63d8e6; /* لون ذهبي، ممكن تغيّره حسب التصميم */
+  text-align: center;
+  font-weight: 400;
+}
+
 /* Glossy Black Background with Optical Illusion */
 .bg-orbits {
   position: absolute;
@@ -47,7 +55,7 @@
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 12px rgba(234, 206, 45, 0.8), 0 0 20px rgba(255, 215, 0, 0.7), 0 0 30px rgba(0, 255, 204, 0.6);
   animation: neonGlow 1.5s ease-in-out infinite alternate;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
   font-family: 'Poppins', sans-serif;
   transform: perspective(1200px) rotateX(6deg);
   letter-spacing: 0.15rem;
@@ -169,11 +177,11 @@
 /* Hero Paragraph with Enhanced Glowing Effect */
 .hero-paragraph {
   font-size: 1.3rem;
-  background: linear-gradient(90deg, #dde639, #ffd700, #00ffcc);
+  background: linear-gradient(90deg, #319deb, #ffd700, #ea1c1c);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 8px rgba(224, 221, 18, 0.7), 0 0 12px rgba(0, 255, 204, 0.6);
+  text-shadow: 0 0 8px rgba(224, 221, 18, 0.7), 0 0 12px rgba(19, 21, 21, 0.6);
   animation: paragraphGlow 1.5s ease-in-out infinite alternate;
   font-family: 'Cairo', sans-serif;
   max-width: 800px;
@@ -214,11 +222,11 @@
 
 .translate-button {
   position: fixed;
-  top: 14px;
-  right: 14px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 70%;
   background: radial-gradient(circle at 30% 30%, #ecd404, #0a0a0a);
   box-shadow:
     0 0 6px rgba(158, 206, 11, 0.6),

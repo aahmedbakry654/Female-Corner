@@ -9,13 +9,15 @@ function Hero() {
   const content = {
     en: {
       title: 'Female Corner',
-     
-      paragraph: 'An Egyptian brand established in 2002 that offered a wide range of women veiled wear which try to follow latest international fashion with producing good products in high quality and style for suiting all tastes with reasonable price.',
+      subtitle: 'Since 2002 in Zagazig',
+      paragraph:
+        'An Egyptian brand established in 2002 that offered a wide range of women veiled wear which try to follow latest international fashion with producing good products in high quality and style for suiting all tastes with reasonable price.',
     },
     ar: {
       title: 'Female Corner',
-     
-      paragraph: 'علامة تجارية مصرية أسست في عام 2002 تقدم مجموعة واسعة من الملابس النسائية المحجبة التي تحاول متابعة أحدث صيحات الموضة الدولية مع إنتاج منتجات جيدة بجودة عالية وأسلوب يناسب جميع الأذواق بأسعار معقولة.',
+      subtitle: 'منذ عام 2002 في الزقازيق',
+      paragraph:
+        'علامة تجارية مصرية أسست في عام 2002 تقدم مجموعة واسعة من الملابس النسائية المحجبة التي تحاول متابعة أحدث صيحات الموضة الدولية مع إنتاج منتجات جيدة بجودة عالية وأسلوب يناسب جميع الأذواق بأسعار معقولة.',
     },
   };
 
@@ -71,10 +73,13 @@ function Hero() {
       <div className="bg-orbits"></div>
       <div className="hero-content">
         <h1 className="hero-title">{content[language].title}</h1>
+        <p className="hero-subparagraph">
+          {content[language].subtitle}
+        </p>
 
         <div className="videos-grid">
           {videos.map((video) => (
-            <div key={video.id} className="video-item"> {/* تغيير من video-card إلى video-item */}
+            <div key={video.id} className="video-item">
               <div className="video-header">
                 <a href={video.videoUrl} target="_blank" rel="noopener noreferrer" className="video-link">
                   {video.name[language]}
