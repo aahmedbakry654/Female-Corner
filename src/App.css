@@ -1,8 +1,10 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%; /* عرض كامل */
+  max-width: 100%; /* إزالة الحد الأقصى */
+  margin: 0; /* إزالة الهوامش */
+  padding: 0; /* إزالة الـ padding */
   text-align: center;
+  box-sizing: border-box; /* لضمان تحسين التسجيل */
 }
 
 .logo {
@@ -27,18 +29,10 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.container, .main-content {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-

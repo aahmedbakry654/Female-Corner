@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaGlobe } from 'react-icons/fa';
+
 import './Hero.css';
 
 function Hero() {
@@ -8,15 +9,16 @@ function Hero() {
   const content = {
     en: {
       title: 'Female Corner',
+     
       paragraph: 'An Egyptian brand established in 2002 that offered a wide range of women veiled wear which try to follow latest international fashion with producing good products in high quality and style for suiting all tastes with reasonable price.',
     },
     ar: {
       title: 'Female Corner',
+     
       paragraph: 'علامة تجارية مصرية أسست في عام 2002 تقدم مجموعة واسعة من الملابس النسائية المحجبة التي تحاول متابعة أحدث صيحات الموضة الدولية مع إنتاج منتجات جيدة بجودة عالية وأسلوب يناسب جميع الأذواق بأسعار معقولة.',
     },
   };
 
-  // بيانات الفيديوهات مع تحسين المسارات
   const videos = [
     {
       id: 1,
@@ -25,7 +27,7 @@ function Hero() {
         ar: 'صلاح سالم بجوار مستشفى النخبة',
       },
       videoUrl: '/vedio/vid1.mp4',
-      poster: '/photo/photo1.jpg', // إضافة صورة معاينة
+      poster: '/photo/photo1.jpg',
     },
     {
       id: 2,
@@ -56,7 +58,6 @@ function Hero() {
     },
   ];
 
-  // تحديث لغة الصفحة
   useEffect(() => {
     document.documentElement.lang = language;
   }, [language]);
@@ -73,7 +74,7 @@ function Hero() {
 
         <div className="videos-grid">
           {videos.map((video) => (
-            <div key={video.id} className="video-card">
+            <div key={video.id} className="video-item"> {/* تغيير من video-card إلى video-item */}
               <div className="video-header">
                 <a href={video.videoUrl} target="_blank" rel="noopener noreferrer" className="video-link">
                   {video.name[language]}
@@ -84,11 +85,11 @@ function Hero() {
                   width="100%"
                   height="220px"
                   controls
-                  preload="none" // تحسين تحميل الفيديو
-                  poster={video.poster} // صورة معاينة
+                  preload="none"
+                  poster={video.poster}
                   src={video.videoUrl}
                   title={video.name[language]}
-                  loading="lazy" // تحميل كسول للفيديو
+                  loading="lazy"
                 >
                   Your browser does not support the video tag.
                 </video>
@@ -108,4 +109,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default Hero;
